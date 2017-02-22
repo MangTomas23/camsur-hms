@@ -38,6 +38,8 @@ class CreatePatientsTable extends Migration
             $table->string('remarks')->nullable();
             $table->integer('sync')->nullable();
             $table->string('date')->nullable();
+            $table->integer('hospital_id')->unsigned();
+            $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('set null');
             $table->timestamps();
         });
     }
