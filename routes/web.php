@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('main', 'MainController@index');
 
 Route::resource('hospital', 'HospitalController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
