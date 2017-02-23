@@ -131,8 +131,110 @@ class SyncController extends Controller
 
     if($consume_stocks)
     foreach($consume_stocks as $i => $c) {
-
+      $c = (object) $c;
+      $consumeStock = new ConsumeStock;
+      $consumeStock->consumecode = $c->consumecode;
+      $consumeStock->status = $c->status;
+      $consumeStock->productcode = $c->productcode;
+      $consumeStock->remarks = $c->remarks;
+      $consumeStock->supplierdisc = $c->supplierdisc;
+      $consumeStock->dateentry = $c->dateentry;
+      $consumeStock->hospitalid = $c->hospitalid;
+      $consumeStock->sync = 1;
+      $consumeStock->usercode = $c->usercode;
+      $consumeStock->discountpercentage = $c->discountpercentage;
+      $consumeStock->contactno = $c->contactno;
+      $consumeStock->percentage = $c->percentage;
+      $consumeStock->amount = $c->amount;
+      $consumeStock->discountedamount = $c->discountedamount;
+      $consumeStock->hospital_id = $h_id;
+      $consumeStock->save();
     }
+
+    if($returns)
+    foreach($returns as $i => $r) {
+      $r = (object) $r;
+      $mreturn = new MReturn;
+      $mreturn->returncode = $r->returncode;
+      $mreturn->status = $r->status;
+      $mreturn->stockcode = $r->stockcode;
+      $mreturn->remarks = $r->remarks;
+      $mreturn->quantity = $r->quantity;
+      $mreturn->dateentry = $this->validateDate($r->dateentry);
+      $mreturn->hospitalid = $r->hospitalid;
+      $mreturn->sync = 1;
+      $mreturn->usercode = $r->usercode;
+      $mreturn->hospital_id = $h_id;
+      $mreturn->save();
+    }
+
+    if($sub_categories)
+    foreach($sub_categories as $i => $s) {
+      $s = (object) $s;
+      $subcat = new SubCategory;
+      $subcat->subcatproductcode = $s->subcatproductcode;
+      $subcat->subcatproductdescription = $s->subcatproductdescription;
+      $subcat->remarks = $s->remarks;
+      $subcat->status = $s->status;
+      $subcat->usercode = $s->usercode;
+      $subcat->dateentry = $this->validateDate($s->dateentry);
+      $subcat->sync = 1;
+      $subcat->hospitalid = $s->hospitalid;
+      $subcat->hospital_id = $h_id;
+      $subcat->save();
+    }
+
+    if($product_categories)
+    foreach($product_categories as $i => $p) {
+      $p = (object) $p;
+      $pcat = new ProductCategory;
+      $pcat->catproductcode = $p->catproductcode;
+      $pcat->catproductdescription = $p->catproductdescription;
+      $pcat->remarks = $p->remarks;
+      $pcat->status = $p->status;
+      $pcat->usercode = $p->usercode;
+      $pcat->dateentry = $this->validateDate($p->dateentry);
+      $pcat->hospitalid = $p->hospitalid;
+      $pcat->sync = 1;
+      $pcat->hospital_id = $h_id;
+      $pcat->save();
+    }
+
+    if($accounts)
+    foreach($accounts as $i => $a) {
+      $a = (object) $a;
+      $account = new Account;
+      $account->accountType = $a->accountType;
+      $account->status = $a->status;
+      $account->lastname = $a->lastname;
+      $account->middlename = $a->middlename;
+      $account->firstname = $a->firstname;
+      $account->extension = $a->extension;
+      $account->username = $a->username;
+      $account->password = $a->password;
+      $account->sync = 1;
+      $account->hospital_id = $h_id;
+      $account->save();
+    }
+
+    if($products)
+    foreach($products as $i => $p) {
+      $p = (object) $p;
+      $product = new Product;
+      $product->productcode = $p->productcode;
+      $product->productdescription = $p->productdescription;
+      $product->catproductcode = $p->catproductcode;
+      $product->subcatproductcode = $p->subcatproductcode;
+      $product->remarks = $p->remarks;
+      $product->status = $p->status;
+      $product->usercode = $p->usercode;
+      $product->dateentry = $this->validateDate($p->dateentry);
+      $product->hospitalid = $p->hospitalid;
+      $product->sync = 1;
+      $product->price = $p->price;
+      $product->hospital_id = $h_id;
+      $product->save();
+  }
 
     return ["message" => "success"];
   }
