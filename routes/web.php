@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/main', 'MainController@index');
+Route::get('main', 'MainController@index');
+
+Route::resource('hospital', 'HospitalController');
