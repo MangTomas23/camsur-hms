@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/bower_components/bulma/css/bulma.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -36,7 +37,15 @@
       </span>
       @if(Auth::check())
         <div class="nav-right nav-menu">
-          <a class="nav-item is-tab" href="{{ route('logout') }}">Log out</a>
+          <a href="{{ route('logout') }}" class="nav-item is-tab"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+              Logout
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
         </div>
       @endif
     </div>

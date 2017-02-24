@@ -12,6 +12,8 @@ class HospitalController extends Controller
   }
 
   public function show($id) {
-    return Hospital::find($id)->get();
+    $hospital = Hospital::find($id)->first();
+    $patients = $hospital->patients()->paginate(15);
+    return view('hospital.show', ['hospital' => $hospital, 'patients' => $patients]);
   }
 }
