@@ -3,8 +3,6 @@
 @section('title', $hospital->hospitalid)
 
 @section('content')
-
-<section class="section">
   <div class="container">
     <h1 class="title is-1">{{ $hospital->hospitalid }}</h1>
 
@@ -53,7 +51,6 @@
       </ul>
     </nav>
   </div>
-</section>
 
 <div class="modal">
   <div class="modal-background"></div>
