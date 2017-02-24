@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Register')
+
 @section('content')
 
 <div class="section full-height">
@@ -8,16 +10,38 @@
       <form action="{{ route('register') }}" method="post">
       {{ csrf_field() }}
       <label for="name" class="label">Name</label>
-      <div class="control">
-        <input type="text" class="input" name="name" value="">
+      <div class="control has-icon has-icon-right">
+        <input type="text" class="input {{ $errors->has('name') ? 'is-danger':'' }}" name="name" value="">
+        @if($errors->has('name'))
+          <span class="icon is-small">
+            <i class="fa fa-warning"></i>
+          </span>
+          <span class="help is-danger">{{ $errors->first('name') }}</span>
+        @endif
       </div>
       <label for="email" class="label">Email</label>
-      <div class="control">
-        <input type="text" class="input" name="email" value="">
+      <div class="control has-icon has-icon-right">
+        <input type="text" class="input {{ $errors->has('email') ? 'is-danger':'' }}" name="email" value="">
+        @if($errors->has('email'))
+          <span class="icon is-small">
+            <i class="fa fa-warning"></i>
+          </span>
+          <span class="help is-danger">{{ $errors->first('email') }}</span>
+        @endif
       </div>
       <label for="password" class="label">Password</label>
+      <div class="control has-icon has-icon-right">
+        <input type="password" class="input {{ $errors->has('password') ? 'is-danger':'' }}" name="password" value="">
+        @if($errors->has('password'))
+          <span class="icon is-small">
+            <i class="fa fa-warning"></i>
+          </span>
+          <span class="help is-danger">{{ $errors->first('password') }}</span>
+        @endif
+      </div>
+      <label for="password_confirmation" class="label">Confirm Password</label>
       <div class="control">
-        <input type="password" class="input" name="password" value="">
+        <input type="password" class="input" name="password_confirmation" value="">
       </div>
       <div class="control">
         <button type="submit" class="button is-primary is-pulled-right" name="button">
