@@ -8,7 +8,8 @@ use App\Hospital;
 class HospitalController extends Controller
 {
   public function index() {
-    return Hospital::all();
+    $hospitals = Hospital::all();
+    return view('hospital.index', ['hospitals' => $hospitals]);
   }
 
   public function show($id) {

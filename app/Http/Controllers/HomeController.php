@@ -25,6 +25,6 @@ class HomeController extends Controller
     public function index()
     {
       $hospitals = Hospital::all();
-      return view('home', ['hospitals' => $hospitals]);
+      return view('hospital.index', ['hospitals' => $hospitals]);
     }
 }

@@ -1,3 +1,16 @@
+html {
+  background-color: rgb(6, 24, 32);
+}
+
+body {
+  .columns {
+    margin-bottom: 0 !important;
+  }
+}
+
+.section {
+  background-color: transparent;
+}
 
 .title {
   &.is-1 {
@@ -6,4 +19,13 @@
   &.is-2 {
     font-size: 18px;
   }
+}
+
+.main {
+  background-color: white;
+  min-height: 100vh;
+}
+
+aside.menu {
+  padding: 16px;
 }

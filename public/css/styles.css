@@ -1,6 +1,22 @@
+html {
+  background-color: #061820; }
+
+body .columns {
+  margin-bottom: 0 !important; }
+
+.section {
+  background-color: transparent; }
+
 .title.is-1 {
   font-size: 24px; }
 .title.is-2 {
   font-size: 18px; }
+
+.main {
+  background-color: white;
+  min-height: 100vh; }
+
+aside.menu {
+  padding: 16px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -50,7 +50,6 @@
       @endif
     </div>
   </nav>
-    <section class="section">
       <div class="columns">
         <div class="column is-2">
           <aside class="menu">
@@ -58,8 +57,8 @@
               General
             </p>
             <ul class="menu-list">
-              <li><a>Hospitals</a></li>
-              <li><a>Patients</a></li>
+              <li><a href="/hospital">Hospitals</a></li>
+              <li><a href="/patient">Patients</a></li>
             </ul>
             <p class="menu-label">
               Administration
@@ -78,11 +77,10 @@
             </ul>
           </aside>
         </div>
-        <div class="column">
+        <div class="column main">
           @yield('content')
         </div>
       </div>
-    </section>
   <!-- Scripts -->
 
   <script src="{{ asset('js/app.js') }}"></script>
