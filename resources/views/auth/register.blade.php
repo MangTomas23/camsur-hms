@@ -1,7 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+<div class="section full-height">
+  <div class="container">
+    <div class="column is-half is-offset-one-quarter">
+      <form action="{{ route('register') }}" method="post">
+      {{ csrf_field() }}
+      <label for="name" class="label">Name</label>
+      <div class="control">
+        <input type="text" class="input" name="name" value="">
+      </div>
+      <label for="email" class="label">Email</label>
+      <div class="control">
+        <input type="text" class="input" name="email" value="">
+      </div>
+      <label for="password" class="label">Password</label>
+      <div class="control">
+        <input type="password" class="input" name="password" value="">
+      </div>
+      <div class="control">
+        <button type="submit" class="button is-primary is-pulled-right" name="button">
+          Register
+        </button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -72,5 +101,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
