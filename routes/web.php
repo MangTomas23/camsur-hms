@@ -19,6 +19,8 @@ Route::get('main', 'MainController@index');
 
 Route::resource('hospital', 'HospitalController');
 
+Route::resource('patient', 'PatientController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
