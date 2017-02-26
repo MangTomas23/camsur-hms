@@ -14,7 +14,8 @@ body .columns {
 
 .main {
   background-color: white;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding: 28px; }
 
 aside.menu {
   padding: 16px; }
