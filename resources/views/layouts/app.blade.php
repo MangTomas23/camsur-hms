@@ -22,37 +22,10 @@
     </script>
 </head>
 <body>
-  <nav class="nav has-shadow">
-    <div class="container">
-      <div class="nav-left">
-        <a href="/" class="nav-item">
-          <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
-          HMS
-        </a>
-      </div>
-      <span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      @if(Auth::check())
-        <div class="nav-right nav-menu">
-          <a href="{{ route('logout') }}" class="nav-item is-tab"
-              onclick="event.preventDefault();
-                       document.getElementById('logout-form').submit();">
-              Logout
-          </a>
 
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              {{ csrf_field() }}
-          </form>
-        </div>
-      @endif
-    </div>
-  </nav>
       <div class="columns">
         <div class="column is-2">
-          <aside class="menu">
+          <aside class="menu is-hidden-mobile">
             <div class="menu-user">
               <div class="columns">
                 <img src="/img/64x64.png" alt="">
@@ -86,8 +59,38 @@
             </ul>
           </aside>
         </div>
-        <div class="column main">
-          @yield('content')
+        <div class="column" style="padding-bottom: 0">
+          <nav class="nav has-shadow">
+            <div class="container">
+              <div class="nav-left">
+                <a href="/" class="nav-item">
+                  <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
+                  HMS
+                </a>
+              </div>
+              <span class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              @if(Auth::check())
+                <div class="nav-right nav-menu">
+                  <a href="{{ route('logout') }}" class="nav-item is-tab"
+                      onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                      Logout
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                  </form>
+                </div>
+              @endif
+            </div>
+          </nav>
+          <div class="main">
+            @yield('content')
+          </div>
         </div>
       </div>
   <!-- Scripts -->
