@@ -21,6 +21,7 @@
         <td>{{ $patient->lastname }}</td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->middlename }}</td>
+        <td>{{ $patient->hospital->hospitalid }}</td>
       </tr>
     @empty
       <tr>
