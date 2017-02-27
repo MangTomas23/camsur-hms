@@ -24,3 +24,6 @@ Route::group(['prefix' => 'change/password'], function() {
   Route::post('/', 'Auth\ChangePasswordController@updatePassword');
 });
 Route::get('home', 'HomeController@index');
+Route::group(['prefix' => 'database'], function() {
+  Route::get('/', 'DatabaseController@index');
+});
