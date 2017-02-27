@@ -18,12 +18,18 @@ body .columns {
   padding: 28px; }
 
 aside.menu {
-  padding: 16px;
-  color: #c2c2c2 !important; }
+  padding: 16px; }
   aside.menu .menu-list li a {
     color: #bfbfbf; }
     aside.menu .menu-list li a:hover {
       color: #00d1b2; }
+  aside.menu .menu-user {
+    color: #c2c2c2 !important; }
+    aside.menu .menu-user img {
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      border: none !important; }
 
 .patient-info p {
   margin-bottom: 6px !important; }

@@ -55,8 +55,7 @@
           <aside class="menu">
             <div class="menu-user">
               <div class="columns">
-                <div class="column is-1">
-                </div>
+                <img src="/img/64x64.png" alt="">
                 <div class="column">
                   <p>Welcome, </p>
                   <span>{{ Auth::user()->name }}</span>

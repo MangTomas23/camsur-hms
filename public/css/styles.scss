@@ -31,12 +31,21 @@ body {
 
 aside.menu {
   padding: 16px;
-  color: rgb(194, 194, 194) !important;
   .menu-list li a{
     color: rgb(191, 191, 191);
 
     &:hover {
       color: #00d1b2;
+    }
+  }
+
+  .menu-user {
+    color: rgb(194, 194, 194) !important;
+    img {
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      border: none !important;
     }
   }
 }
