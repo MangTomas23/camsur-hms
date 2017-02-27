@@ -4,7 +4,21 @@
 
 @section('content')
 
-<h1 class="title is-1">Patients</h1>
+<div class="columns">
+  <div class="column">
+    <h1 class="title is-1">Patients</h1>
+  </div>
+  <div class="column is-3 has-text-right">
+    <form action="/patient/search" method="get">
+      <div class="control has-addons">
+        <input type="text" class="input" name="q" placeholder="Search">
+        <button type="button" name="button" class="button is-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <table class="table is-striped">
   <thead>

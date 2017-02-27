@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="title is-1">Search results for ""</h1>
+<h1 class="title is-1">Search results for "{{ $query }}"</h1>
 
 @endsection

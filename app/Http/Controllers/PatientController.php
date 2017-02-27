@@ -19,6 +19,7 @@ class PatientController extends Controller
   }
 
   public function search(Request $request) {
-    return $request->all();
+    $query = $request->q;
+    return view('patient.search', ['query' => $query]);
   }
 }
