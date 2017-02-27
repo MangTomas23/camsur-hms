@@ -23,4 +23,6 @@ Route::resource('patient', 'PatientController');
 
 Auth::routes();
 
+Route::get('password/change', 'Auth\ChangePasswordController@index');
+
 Route::get('/home', 'HomeController@index');

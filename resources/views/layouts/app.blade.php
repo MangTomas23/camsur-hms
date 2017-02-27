@@ -64,7 +64,7 @@
               Administration
             </p>
             <ul class="menu-list">
-              <li><a>Change Password</a></li>
+              <li><a href="/password/change">Change Password</a></li>
               <li><a>Authentication</a></li>
             </ul>
             <p class="menu-label">
