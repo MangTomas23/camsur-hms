@@ -36,4 +36,15 @@
 </article>
 </div>
 
+@php $hospital  = $patient->hospital @endphp
+
+<h2 class="title is-2">From</h2>
+<div class="box">
+  <div class="columns">
+    <div class="column">
+      <p><strong>Hospital ID: </strong><a href="/hospital/{{ $hospital->id }}">{{ $hospital->hospitalid }}</a></p>
+      <p><strong>Hospital Description: </strong>{{ $hospital->hospitaldescription }}</p>
+    </div>
+  </div>
+</div>
 @endsection

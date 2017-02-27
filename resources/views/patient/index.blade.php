@@ -35,4 +35,20 @@
   </tbody>
 </table>
 
+<nav class="pagination">
+  <a href="{{ $patients->previousPageUrl() }}" class="pagination-previous">Previous</a>
+  <a href="{{ $patients->nextPageUrl() }}" class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li>
+      <a class="pagination-link" href="{{ $patients->url(1) }}">First</a>
+    </li>
+    <li>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+    <li>
+      <a class="pagination-link" href="{{ $patients->url($patients->lastPage()) }}">Last</a>
+    </li>
+  </ul>
+</nav>
+
 @endsection

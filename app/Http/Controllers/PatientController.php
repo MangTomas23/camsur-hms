@@ -8,7 +8,8 @@ use App\Patient;
 class PatientController extends Controller
 {
   public function index() {
-    $patients = Patient::all();
+    $patients = Patient::paginate(15);
+    
     return view('patient.index', ['patients' => $patients]);
   }
 
