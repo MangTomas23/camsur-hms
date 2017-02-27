@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="title is-1">Patient</h1>
+<h1 class="title is-1">Patients</h1>
 
 @endsection
