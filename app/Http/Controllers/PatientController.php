@@ -20,6 +20,10 @@ class PatientController extends Controller
 
   public function search(Request $request) {
     $query = $request->q;
-    return view('patient.search', ['query' => $query]);
+    $patients = Patient::all();
+    return view('patient.search', [
+      'query' => $query,
+      'patients' => $patients
+    ]);
   }
 }
