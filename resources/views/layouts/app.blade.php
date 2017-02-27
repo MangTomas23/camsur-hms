@@ -53,6 +53,16 @@
       <div class="columns">
         <div class="column is-2">
           <aside class="menu">
+            <div class="menu-user">
+              <div class="columns">
+                <div class="column is-1">
+                </div>
+                <div class="column">
+                  <p>Welcome, </p>
+                  <span>{{ Auth::user()->name }}</span>
+                </div>
+              </div>
+            </div>
             <p class="menu-label">
               General
             </p>
