@@ -65,7 +65,7 @@
             </p>
             <ul class="menu-list">
               <li><a href="/change/password">Change Password</a></li>
-              <li><a>Authentication</a></li>
+              <li><a>Database</a></li>
             </ul>
             <p class="menu-label">
               Transactions
