@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('main', 'MainController@index');
 Route::resource('hospital', 'HospitalController');
+Route::get('patient/search', 'PatientController@search');
 Route::resource('patient', 'PatientController');
 Route::group(['prefix' => 'change/password'], function() {
   Route::get('/', 'Auth\ChangePasswordController@index');
