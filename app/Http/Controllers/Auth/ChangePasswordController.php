@@ -10,4 +10,8 @@ class ChangePasswordController extends Controller
   public function index() {
     return view('auth.change');
   }
+
+  public function updatePassword() {
+    return 'updatepassword';
+  }
 }

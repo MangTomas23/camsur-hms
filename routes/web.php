@@ -15,14 +15,12 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('main', 'MainController@index');
-
-Route::resource('hospital', 'HospitalController');
-
-Route::resource('patient', 'PatientController');
-
 Auth::routes();
-
-Route::get('password/change', 'Auth\ChangePasswordController@index');
-
-Route::get('/home', 'HomeController@index');
+Route::get('main', 'MainController@index');
+Route::resource('hospital', 'HospitalController');
+Route::resource('patient', 'PatientController');
+Route::group(['prefix' => 'change/password'], function() {
+  Route::get('/', 'Auth\ChangePasswordController@index');
+  Route::post('/', 'Auth\ChangePasswordController@updatePassword');
+});
+Route::get('home', 'HomeController@index');
