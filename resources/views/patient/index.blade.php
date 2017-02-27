@@ -12,7 +12,7 @@
     <form action="/patient/search" method="get">
       <div class="control has-addons">
         <input type="text" class="input" name="q" placeholder="Search">
-        <button type="button" name="button" class="button is-primary">
+        <button type="submit" name="button" class="button is-primary">
           <i class="fa fa-search"></i>
         </button>
       </div>
