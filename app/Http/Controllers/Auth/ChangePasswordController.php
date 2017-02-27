@@ -23,7 +23,7 @@ class ChangePasswordController extends Controller
   public function updatePassword(Request $request) {
 
     if(!$this->validatePassword($request->old_password))
-      return $this->sendErrorResponse();
+      return back()->withErrors(['old_password' => 'Invalid Password']);
 
     if($this->validateInputs($request->all()))
       return $this->sendErrorResponse();
@@ -42,7 +42,8 @@ class ChangePasswordController extends Controller
   private function validateInputs($inputs) {
     $this->validator = Validator::make($inputs, [
       'old_password' => 'required',
-      'new_password' => 'required|confirmed'
+      'new_password' => 'required|confirmed',
+      'new_password_confirmation' => 'required'
     ]);
 
     return $this->validator->fails();
