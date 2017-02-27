@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="title is-1">Patient Info</h1>
+<h1 class="title is-1">Patient's Info</h1>
 
 <div class="box">
   <article class="media">
