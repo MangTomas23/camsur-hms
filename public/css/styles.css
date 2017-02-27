@@ -20,4 +20,7 @@ body .columns {
 aside.menu {
   padding: 16px; }
 
+.patient-info p {
+  margin-bottom: 6px !important; }
+
 /*# sourceMappingURL=styles.css.map */
