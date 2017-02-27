@@ -9,6 +9,7 @@
 <table class="table is-striped">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Last Name</th>
       <th>First Name</th>
       <th>Middle Name</th>
@@ -18,6 +19,9 @@
   <tbody>
     @forelse($patients as $patient)
       <tr>
+        <td>
+          <a href="/patient/{{ $patient->id }}">{{ $patient->id }}</a>
+        </td>
         <td>{{ $patient->lastname }}</td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->middlename }}</td>
