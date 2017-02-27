@@ -10,7 +10,9 @@
         {{ csrf_field() }}
         <label for="email" class="label">Email</label>
         <div class="control has-icon has-icon-right">
-          <input type="text" class="input {{ $errors->has('email') ? 'is-danger':'' }}" name="email" value="">
+          <input type="text"
+                 class="input {{ $errors->has('email') ? 'is-danger':'' }}"
+                 name="email" value="{{ old('email') }}">
           @if($errors->has('email'))
             <span class="icon is-small">
               <i class="fa fa-warning"></i>
@@ -22,7 +24,7 @@
         <div class="control">
           <input type="password" class="input" name="password" value="">
           @if($errors->has('password'))
-            <span class="help is-danger">{{ $errors->first('password') }} ass</span>
+            <span class="help is-danger">{{ $errors->first('password') }}</span>
           @endif
         </div>
         <div class="control">
