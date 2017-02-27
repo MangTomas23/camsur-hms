@@ -24,8 +24,14 @@
         <input type="password" class="input" name="new_password_confirmation" value="">
       </div>
       <div class="control">
-        <button type="submit" class="button is-primary" name="button">Submit</button>
+        <button type="submit" class="button is-primary">Submit</button>
       </div>
+
+      @if($errors)
+        <div class="notification is-danger">
+          <p>Error</p>
+        </div>
+      @endif
     </form>
   </div>
 </section>
