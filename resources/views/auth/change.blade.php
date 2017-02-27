@@ -9,7 +9,9 @@
 
 <section class="section">
   <div class="container">
-    <form class="" action="/change/password" method="post">
+    <div class="columns">
+      <div class="column is-half">
+        <form class="" action="/change/password" method="post">
       {{ csrf_field() }}
       @if(session('success'))
         <div class="notification is-success">
@@ -47,6 +49,8 @@
         <button type="submit" class="button is-primary">Submit</button>
       </div>
     </form>
+      </div>
+    </div>
   </div>
 </section>
 @endsection
