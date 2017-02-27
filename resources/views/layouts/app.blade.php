@@ -82,7 +82,8 @@
         </div>
       </div>
   <!-- Scripts -->
-
   <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+  @stack('scripts')
 </body>
 </html>

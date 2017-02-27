@@ -20,3 +20,13 @@
   </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready( function() {
+    $('button').on('click', function() {
+      alert('Not yet implemented!');
+    });
+  });
+</script>
+@endpush
