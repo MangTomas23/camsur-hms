@@ -10,6 +10,7 @@
     <table class="table is-striped patient">
       <thead>
         <tr>
+          <th>ID</th>
           <th>Last Name</th>
           <th>First Name</th>
           <th>Middle Name</th>
@@ -21,6 +22,7 @@
       <tbody>
         @forelse($patients as $patient)
           <tr data-id="{{ $patient->id }}">
+            <td>{{ $patient->id }}</td>
             <td>{{ $patient->lastname }}</td>
             <td>{{ $patient->firstname }}</td>
             <td>{{ $patient->middlename }}</td>
