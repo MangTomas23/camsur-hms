@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<table class="table is-striped">
+<table class="table is-striped patient">
   <thead>
     <tr>
       <th>ID</th>
@@ -32,10 +32,8 @@
   </thead>
   <tbody>
     @forelse($patients as $patient)
-      <tr>
-        <td>
-          <a href="/patient/{{ $patient->id }}">{{ $patient->id }}</a>
-        </td>
+      <tr data-id="{{ $patient->id }}">
+        <td>{{ $patient->id }}</td>
         <td>{{ $patient->lastname }}</td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->middlename }}</td>
@@ -66,3 +64,14 @@
 </nav>
 
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready( function() {
+    $('.table.patient tbody tr').on('click', function() {
+      var id = $(this).data('id');
+      window.location.href = `/patient/${id}`;
+    });
+  });
+</script>
+@endpush
