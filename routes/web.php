@@ -28,3 +28,4 @@ Route::get('home', 'HomeController@index');
 Route::group(['prefix' => 'database'], function() {
   Route::get('/', 'DatabaseController@index');
 });
+Route::resource('supplier', 'SupplierController');
