@@ -4,23 +4,28 @@
 
 @section('content')
   <div class="container">
-    <h1 class="title is-1">{{ $hospital->hospitalid }}</h1>
+    <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+    <h1 class="subtitle">
+      {{ $hospital->hospitalid }}
+      <span class="tag is-success">{{ $hospital->status }}</span>
+    </h1>
 
-    <h2 class="title is-2">Patients</h2>
-    <table class="table is-striped patient">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Last Name</th>
-          <th>First Name</th>
-          <th>Middle Name</th>
-          <th>Gender</th>
-          <th>Age</th>
-          <th>Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        @forelse($patients as $patient)
+    <section>
+      <h2 class="title is-2">Patients</h2>
+      <table class="table is-striped patient">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          @forelse($patients as $patient)
           <tr data-id="{{ $patient->id }}">
             <td>{{ $patient->id }}</td>
             <td>{{ $patient->lastname }}</td>
@@ -30,13 +35,14 @@
             <td>{{ $patient->age }}</td>
             <td>{{ $patient->address }}</td>
           </tr>
-        @empty
+          @empty
           <div class="notification is-warning">
             Empty records!
           </div>
-        @endforelse
-      </tbody>
-    </table>
+          @endforelse
+        </tbody>
+      </table>
+    </section>
     <nav class="pagination">
       <a href="{{ $patients->previousPageUrl() }}" class="pagination-previous">Previous</a>
       <a href="{{ $patients->nextPageUrl() }}" class="pagination-next">Next page</a>
