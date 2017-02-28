@@ -79,12 +79,5 @@
 @endsection
 
 @push('scripts')
-<script>
-  $(document).ready( function() {
-    $('.table.patient tbody tr').on('click', function() {
-      var id = $(this).data('id');
-      window.location.href = `/patient/${id}`;
-    });
-  });
-</script>
+<script src="/js/patient-table.js"></script>
 @endpush
