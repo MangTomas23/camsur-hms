@@ -7,7 +7,7 @@
     <h1 class="title is-1">{{ $hospital->hospitalid }}</h1>
 
     <h2 class="title is-2">Patients</h2>
-    <table class="table is-striped">
+    <table class="table is-striped patient">
       <thead>
         <tr>
           <th>Last Name</th>
@@ -20,7 +20,7 @@
       </thead>
       <tbody>
         @forelse($patients as $patient)
-          <tr>
+          <tr data-id="{{ $patient->id }}">
             <td>{{ $patient->lastname }}</td>
             <td>{{ $patient->firstname }}</td>
             <td>{{ $patient->middlename }}</td>
@@ -69,3 +69,14 @@
   </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready( function() {
+    $('.table.patient tbody tr').on('click', function() {
+      var id = $(this).data('id');
+      window.location.href = `/patient/${id}`;
+    });
+  });
+</script>
+@endpush

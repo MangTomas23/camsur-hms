@@ -57,3 +57,11 @@ aside.menu {
     margin-bottom: 6px !important;
   }
 }
+
+.table.patient {
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}

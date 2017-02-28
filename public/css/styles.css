@@ -36,4 +36,7 @@ aside.menu {
 .patient-info p {
   margin-bottom: 6px !important; }
 
+.table.patient tbody tr {
+  cursor: pointer; }
+
 /*# sourceMappingURL=styles.css.map */
