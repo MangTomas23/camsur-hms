@@ -41,6 +41,7 @@
             <ul class="menu-list">
               <li><a href="/hospital">Hospitals</a></li>
               <li><a href="/patient">Patients</a></li>
+              <li><a href="/supplier">Suppliers</a></li>
             </ul>
             <p class="menu-label">
               Administration
