@@ -16,7 +16,7 @@
           <form class="" action="/hospital/{{$hospital->id}}/patients/search" method="get">
             <div class="control has-addons">
                 <input type="text" class="input" name="q" placeholder="Search" value="">
-                <button type="submit" class="button is-info" name="button">
+                <button type="submit" class="button is-info">
                   <i class="fa fa-search"></i>
                 </button>
             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hospital;
+use App\Patient;
 
 class HospitalController extends Controller
 {
@@ -32,6 +33,10 @@ class HospitalController extends Controller
   }
 
   public function searchPatient(Request $request) {
-    return $request->all();
+    $patients = Patient::where('lastname', 'lastname')->get();
+    return view('patient.search', [
+      'query' => $request->q,
+      'patients' => $patients
+    ]);
   }
 }
