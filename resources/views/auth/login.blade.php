@@ -1,5 +1,7 @@
 @extends('layouts.authentication')
 
+@section('title', 'Login')
+
 @section('content')
 
 <section class="hero is-fullheight">
