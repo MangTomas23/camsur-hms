@@ -11,6 +11,7 @@
         <th>Item</th>
         <th>Category</th>
         <th>Quantity</th>
+        <th>Amount</th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
         <td>Item 1</td>
         <td>Cat 1</td>
         <td>100</td>
+        <td>100,000</td>
       </tr>
     </tbody>
   </table>
