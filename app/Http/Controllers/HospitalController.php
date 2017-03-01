@@ -25,7 +25,7 @@ class HospitalController extends Controller
   }
 
   public function inventory($id) {
-    return 'inventory';
+    return view('hospital.inventory');
   }
 
   private function getHospital($id) {
