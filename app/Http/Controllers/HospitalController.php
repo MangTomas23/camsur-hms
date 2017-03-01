@@ -18,7 +18,8 @@ class HospitalController extends Controller
 
   public function patients($id) {
     return view('hospital.patient', [
-      'patients' => $this->getPatients($id)
+      'patients' => $this->getPatients($id),
+      'hospital' => $this->getHospital($id)
     ]);
   }
 

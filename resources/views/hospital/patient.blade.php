@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
-@section('title', $patients->first()->hospital->hospitalid)
+@section('title', $hospital->hospitalid)
 
 @section('content')
   <div class="container">
-    <section>
-      <h2 class="title is-2">Patients</h2>
+      <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+      <h2 class="subtitle">{{ $hospital->hospitalid }}</h2>
+
+      <section>
+      <h3 class="title is-3">Patients</h3>
       <table class="table is-striped patient">
         <thead>
           <tr>
