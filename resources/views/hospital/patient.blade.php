@@ -8,7 +8,21 @@
       <h2 class="subtitle">{{ $hospital->hospitalid }}</h2>
 
       <section>
-      <h3 class="title is-3">Patients</h3>
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-3">Patients</h3>
+        </div>
+        <div class="column is-3 has-text-right">
+          <form class="" action="index.html" method="post">
+            <div class="control has-addons">
+                <input type="text" class="input" name="q" placeholder="Search" value="">
+                <button type="submit" class="button is-info" name="button">
+                  <i class="fa fa-search"></i>
+                </button>
+            </div>
+          </form>
+        </div>
+      </div>
       <table class="table is-striped patient">
         <thead>
           <tr>
