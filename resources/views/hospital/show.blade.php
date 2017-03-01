@@ -26,17 +26,17 @@
       </div>
       <div class="column">
         <div class="box">
-          Payments
+          <a href="#">Payments</a>
         </div>
       </div>
       <div class="column">
         <div class="box">
-          Doctors
+          <a href="#">Doctors</a>
         </div>
       </div>
       <div class="column">
         <div class="box">
-          Nurse
+          <a href="#">Nurses</a>
         </div>
       </div>
     </div>
