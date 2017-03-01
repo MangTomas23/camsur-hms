@@ -15,27 +15,27 @@
     </h1>
     <div class="columns">
       <div class="column">
-        <div class="box">
+        <div class="box has-text-centered">
           <a href="{{ $link }}/patients">Patients</a>
         </div>
       </div>
       <div class="column">
-        <div class="box">
+        <div class="box has-text-centered">
           <a href="{{ $link }}/inventory">Inventory</a>
         </div>
       </div>
       <div class="column">
-        <div class="box">
+        <div class="box has-text-centered">
           <a href="{{ $link }}/payments">Payments</a>
         </div>
       </div>
       <div class="column">
-        <div class="box">
+        <div class="box has-text-centered">
           <a href="{{ $link }}/doctors">Doctors</a>
         </div>
       </div>
       <div class="column">
-        <div class="box">
+        <div class="box has-text-centered">
           <a href="{{ $link }}/nurses">Nurses</a>
         </div>
       </div>
