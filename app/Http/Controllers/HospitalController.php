@@ -24,6 +24,10 @@ class HospitalController extends Controller
     ]);
   }
 
+  public function inventory($id) {
+    return 'inventory';
+  }
+
   private function getHospital($id) {
     return Hospital::find($id)->first();
   }

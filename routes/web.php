@@ -23,6 +23,7 @@ Route::group(['prefix' => 'hospital/{id}'], function() {
     Route::get('/', 'HospitalController@patients');
     Route::get('search', 'HospitalController@searchPatient');
   });
+  Route::get('inventory', 'HospitalController@inventory');
 });
 Route::get('patient/search', 'PatientController@search');
 Route::resource('patient', 'PatientController');
