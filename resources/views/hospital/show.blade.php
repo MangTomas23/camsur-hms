@@ -26,17 +26,17 @@
       </div>
       <div class="column">
         <div class="box">
-          <a href="#">Payments</a>
+          <a href="{{ $link }}/payments">Payments</a>
         </div>
       </div>
       <div class="column">
         <div class="box">
-          <a href="#">Doctors</a>
+          <a href="{{ $link }}/doctors">Doctors</a>
         </div>
       </div>
       <div class="column">
         <div class="box">
-          <a href="#">Nurses</a>
+          <a href="{{ $link }}/nurses">Nurses</a>
         </div>
       </div>
     </div>
