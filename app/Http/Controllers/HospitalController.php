@@ -37,7 +37,7 @@ class HospitalController extends Controller
   }
 
   public function nurses() {
-    return 'nurses';
+    return view('hospital.nurse');
   }
 
   private function getHospital($id) {
