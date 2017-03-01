@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('main', 'MainController@index');
 Route::resource('hospital', 'HospitalController');
 Route::get('hospital/{id}/patients', 'HospitalController@patients');
+Route::get('hospital/{id}/patients/search', 'HospitalController@searchPatient');
 Route::get('patient/search', 'PatientController@search');
 Route::resource('patient', 'PatientController');
 Route::group(['prefix' => 'change/password'], function() {

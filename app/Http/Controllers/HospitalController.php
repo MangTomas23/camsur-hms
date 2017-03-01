@@ -30,4 +30,8 @@ class HospitalController extends Controller
   private function getPatients($id) {
     return $this->getHospital($id)->patients()->paginate(15);
   }
+
+  public function searchPatient(Request $request) {
+    return $request->all();
+  }
 }
