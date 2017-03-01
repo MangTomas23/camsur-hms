@@ -15,6 +15,7 @@
       {{ csrf_field() }}
       @if(session('success'))
         <div class="notification is-success">
+          <button class="delete" type="button" name="button"></button>
           {{ session('success') }}
         </div>
       @endif
@@ -54,3 +55,12 @@
   </div>
 </section>
 @endsection
+@push('scripts')
+<script>
+  $(document).ready( function() {
+    $('button.delete').on('click', function() {
+      $(this).parent().hide();
+    });
+  });
+</script>
+@endpush
