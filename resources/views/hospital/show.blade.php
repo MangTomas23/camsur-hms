@@ -2,6 +2,10 @@
 
 @section('title', $hospital->hospitalid)
 
+@php
+  $link = '/hospital/'.$hospital->id.'/'
+@endphp
+
 @section('content')
   <div class="container">
     <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
@@ -12,12 +16,12 @@
     <div class="columns">
       <div class="column">
         <div class="box">
-          <a href="/hospital/{{ $hospital->id }}/patients">Patients</a>
+          <a href="{{ $link }}/patients">Patients</a>
         </div>
       </div>
       <div class="column">
         <div class="box">
-          Inventory
+          <a href="{{ $link }}/inventory">Inventory</a>
         </div>
       </div>
       <div class="column">
