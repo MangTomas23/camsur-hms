@@ -28,6 +28,18 @@ class HospitalController extends Controller
     return view('hospital.inventory');
   }
 
+  public function payments() {
+    return view('hospital.payment');
+  }
+
+  public function doctors() {
+    return 'doctors';
+  }
+
+  public function nurses() {
+    return 'nurses';
+  }
+
   private function getHospital($id) {
     return Hospital::find($id)->first();
   }
