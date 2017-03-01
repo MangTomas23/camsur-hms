@@ -3,7 +3,7 @@
 @section('title', $hospital->hospitalid)
 
 @php
-  $link = '/hospital/'.$hospital->id.'/'
+  $link = '/hospital/'.$hospital->id
 @endphp
 
 @section('content')
