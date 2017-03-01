@@ -33,7 +33,7 @@ class HospitalController extends Controller
   }
 
   public function doctors() {
-    return 'doctors';
+    return view('hospital.doctor');
   }
 
   public function nurses() {
