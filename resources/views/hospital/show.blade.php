@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app') -->
 
 @section('title', $hospital->hospitalid)
 
@@ -12,7 +12,7 @@
     <div class="columns">
       <div class="column">
         <div class="box">
-          <a href="#">Patients</a>
+          <a href="/hospital/{{ $hospital->id }}/patients">Patients</a>
         </div>
       </div>
       <div class="column">

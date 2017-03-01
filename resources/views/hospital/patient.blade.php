@@ -1,15 +1,9 @@
 @extends('layouts.app')
 
-@section('title', $hospital->hospitalid)
+@section('title', $patients->first()->hospital->hospitalid)
 
 @section('content')
   <div class="container">
-    <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
-    <h1 class="subtitle">
-      {{ $hospital->hospitalid }}
-      <span class="tag is-success">{{ $hospital->status }}</span>
-    </h1>
-
     <section>
       <h2 class="title is-2">Patients</h2>
       <table class="table is-striped patient">

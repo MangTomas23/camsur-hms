@@ -13,8 +13,20 @@ class HospitalController extends Controller
   }
 
   public function show($id) {
-    $hospital = Hospital::find($id)->first();
-    $patients = $hospital->patients()->paginate(15);
-    return view('hospital.show', ['hospital' => $hospital, 'patients' => $patients]);
+    return view('hospital.show', ['hospital' => $this->getHospital($id)]);
+  }
+
+  public function patients($id) {
+    return view('hospital.patient', [
+      'patients' => $this->getPatients($id)
+    ]);
+  }
+
+  private function getHospital($id) {
+    return Hospital::find($id)->first();
+  }
+
+  private function getPatients($id) {
+    return $this->getHospital($id)->patients()->paginate(15);
   }
 }
