@@ -10,7 +10,7 @@
   <article class="media">
   <figure class="media-left">
     <div class="image">
-      <img src="/img/64x64.png" alt="">
+      <img src="/img/128x128.png" alt="">
     </div>
   </figure>
   <div class="media-content">
