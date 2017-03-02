@@ -11,7 +11,10 @@ class Patient extends Model
 
   protected $searchable = [
     'columns' => [
-      'firstname' => 10
+      'firstname' => 10,
+      'lastname' => 10,
+      'middlename' => 8,
+      'address' => 9
     ]
   ];
 
