@@ -37,6 +37,9 @@ aside.menu {
 
 .patient-info p {
   margin-bottom: 6px !important; }
+.patient-info img {
+  width: 128px;
+  height: 128px; }
 
 .table.patient tbody tr {
   cursor: pointer; }

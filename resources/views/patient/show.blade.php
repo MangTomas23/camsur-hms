@@ -6,15 +6,15 @@
 
 <h1 class="title is-1">Patient's Info</h1>
 
-<div class="box">
+<div class="box patient-info">
   <article class="media">
   <figure class="media-left">
     <div class="image">
-      <img src="http://localhost:4000/images/placeholders/128x128.png" alt="">
+      <img src="/img/64x64.png" alt="">
     </div>
   </figure>
   <div class="media-content">
-    <div class="content patient-info">
+    <div class="content">
       <div class="columns">
         <div class="column">
           <p><strong>Name: </strong>{{ $patient->fullname() }}</p>
