@@ -11,7 +11,7 @@
   <div class="column is-3 has-text-right">
     <form action="/patient/search" method="get">
       <div class="control has-addons">
-        <input type="text" class="input" name="q" placeholder="Search">
+        <input type="text" class="input" name="q" placeholder="Search" required>
         <button type="submit" name="button" class="button is-primary">
           <i class="fa fa-search"></i>
         </button>
