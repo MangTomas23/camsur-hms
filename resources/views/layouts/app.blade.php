@@ -47,7 +47,16 @@
               Administration
             </p>
             <ul class="menu-list">
-              <li><a href="/change/password">Change Password</a></li>
+              <li>
+                <a href="/change/password">
+                  <span class="icon is-small">
+                    <i class="fa fa-key"></i>
+                  </span>
+                  <span>
+                    Change Password
+                  </span>
+                </a>
+              </li>
               <li><a href="/database">Database</a></li>
             </ul>
             <p class="menu-label">
