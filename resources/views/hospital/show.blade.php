@@ -13,29 +13,34 @@
       {{ $hospital->hospitalid }}
       <span class="tag is-success">{{ $hospital->status }}</span>
     </h1>
-    <div class="columns">
-      <div class="column">
+    <div class="columns hospital-menu">
+      <div class="column ">
         <div class="box has-text-centered">
+          <img src="/img/patient-male.png" alt="">
           <a href="{{ $link }}/patients">Patients</a>
         </div>
       </div>
       <div class="column">
         <div class="box has-text-centered">
+          <img src="/img/inventory.jpg" alt="">
           <a href="{{ $link }}/inventory">Inventory</a>
         </div>
       </div>
       <div class="column">
         <div class="box has-text-centered">
+          <img src="/img/payment.png" alt="">
           <a href="{{ $link }}/payments">Payments</a>
         </div>
       </div>
       <div class="column">
         <div class="box has-text-centered">
+          <img src="/img/doctor.png" alt="">
           <a href="{{ $link }}/doctors">Doctors</a>
         </div>
       </div>
       <div class="column">
         <div class="box has-text-centered">
+          <img src="/img/nurse.png" alt="">
           <a href="{{ $link }}/nurses">Nurses</a>
         </div>
       </div>
@@ -45,5 +50,11 @@
 @endsection
 
 @push('scripts')
-<script src="/js/patient-table.js"></script>
+<script>
+  $(document).ready( function() {
+    $('.hospital-menu .box').on('click', function() {
+      window.location.href = $(this).find('a').attr('href');
+    });
+  });
+</script>
 @endpush
