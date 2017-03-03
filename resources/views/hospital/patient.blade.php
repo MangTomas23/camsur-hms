@@ -35,7 +35,7 @@
           </form>
         </div>
       </div>
-      <table class="table is-striped patient">
+      <table id="printTable" class="table is-striped patient">
         <thead>
           <tr>
             <th>ID</th>
@@ -103,10 +103,16 @@
 
 @push('scripts')
 <script src="/js/patient-table.js"></script>
+<script src="/js/print.min.js"></script>
 <script>
   $(document).ready( function() {
     $('#print').click( function() {
-      alert('Not yet implemented!');
+      var header = $('.title.is-1').text();
+      printJS({
+        printable: 'printTable',
+        type: 'html',
+        header
+      });
     });
   });
 </script>
