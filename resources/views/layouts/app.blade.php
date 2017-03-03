@@ -57,7 +57,16 @@
                   </span>
                 </a>
               </li>
-              <li><a href="/database">Database</a></li>
+              <li>
+                <a href="/database">
+                  <span class="icon is-small">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>
+                    Database
+                  </span>
+                </a>
+              </li>
             </ul>
             <p class="menu-label">
               Transactions
