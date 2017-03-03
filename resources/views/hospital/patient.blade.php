@@ -4,7 +4,19 @@
 
 @section('content')
   <div class="container">
-      <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+      <div class="columns">
+        <div class="column">
+          <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+        </div>
+        <div class="column has-text-right">
+          <button id="print" type="button" class="button is-white">
+            <span class="icon is-small">
+              <i class="fa fa-print"></i>
+            </span>
+            <span>Print</span>
+          </button>
+        </div>
+      </div>
       <h2 class="subtitle">{{ $hospital->hospitalid }}</h2>
 
       <section>
@@ -91,4 +103,11 @@
 
 @push('scripts')
 <script src="/js/patient-table.js"></script>
+<script>
+  $(document).ready( function() {
+    $('#print').click( function() {
+      alert('Not yet implemented!');
+    });
+  });
+</script>
 @endpush
