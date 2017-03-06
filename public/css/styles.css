@@ -59,6 +59,8 @@ aside.menu {
     .hospital-menu .column .box img {
       width: 128px;
       height: 128px; }
+    .hospital-menu .column .box a {
+      display: block; }
 
 .nav-menu .logout {
   margin-right: 8px; }
