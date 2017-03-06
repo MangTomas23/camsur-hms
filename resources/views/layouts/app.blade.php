@@ -94,7 +94,7 @@
               </span>
               @if(Auth::check())
                 <div class="nav-right nav-menu">
-                  <a href="{{ route('logout') }}" class="nav-item is-tab"
+                  <a href="{{ route('logout') }}" class="nav-item is-tab logout"
                       onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
                       Logout
