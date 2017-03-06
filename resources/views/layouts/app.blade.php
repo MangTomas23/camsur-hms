@@ -115,6 +115,7 @@
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bulma.js') }}"></script>
   @stack('scripts')
 </body>
 </html>
