@@ -4,9 +4,10 @@
 
 @section('content')
   <div class="container">
-      <div class="columns">
+      <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+      <div class="columns is-mobile">
         <div class="column">
-          <h1 class="title is-1">{{ $hospital->hospitaldescription }}</h1>
+          <h2 class="subtitle">{{ $hospital->hospitalid }}</h2>
         </div>
         <div class="column has-text-right">
           <button id="print" type="button" class="button is-white">
@@ -17,7 +18,6 @@
           </button>
         </div>
       </div>
-      <h2 class="subtitle">{{ $hospital->hospitalid }}</h2>
 
       <section>
       <div class="columns">

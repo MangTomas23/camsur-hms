@@ -14,7 +14,7 @@
       <span class="tag is-success">{{ $hospital->status }}</span>
     </h1>
     <div class="columns hospital-menu">
-      <div class="column ">
+      <div class="column">
         <div class="box has-text-centered">
           <img src="/img/patient-male.png" alt="">
           <a href="{{ $link }}/patients">Patients</a>
