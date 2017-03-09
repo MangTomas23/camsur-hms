@@ -7,7 +7,7 @@
 <h1 class="title is-1">Search results for "{{ $query }}"</h1>
 <a href="#" class="button is-link">Back</a>
 
-<table class="table is-striped">
+<table class="table is-striped patient">
   <thead>
     <tr>
       <th>ID</th>
@@ -19,7 +19,7 @@
   </thead>
   <tbody>
     @forelse($patients as $patient)
-      <tr>
+      <tr data-id="{{ $patient->id }}">
         <td>{{ $patient->id }}</td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->middlename }}</td>
@@ -34,3 +34,6 @@
   </tbody>
 </table>
 @endsection
+@push('scripts')
+<script src="/js/patient-table.js"></script>
+@endpush
