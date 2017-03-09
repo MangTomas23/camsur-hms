@@ -48,8 +48,8 @@ class HospitalController extends Controller
     return $this->getHospital($id)->patients()->paginate(15);
   }
 
-  public function searchPatient(Request $request) {
-    $patients = Patient::where('lastname', 'lastname')->get();
+  public function searchPatient($id, Request $request) {
+    $patients = Hospital::find($id)->patients()->search($request->q)->get();
     return view('patient.search', [
       'query' => $request->q,
       'patients' => $patients
