@@ -14,7 +14,7 @@ class PatientController extends Controller
   }
 
   public function show($id) {
-    $patient = Patient::find($id)->first();
+    $patient = Patient::find($id);
     return view('patient.show', ['patient' => $patient]);
   }
 
