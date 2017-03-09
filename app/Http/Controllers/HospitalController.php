@@ -41,7 +41,7 @@ class HospitalController extends Controller
   }
 
   private function getHospital($id) {
-    return Hospital::find($id)->first();
+    return Hospital::find($id);
   }
 
   private function getPatients($id) {
