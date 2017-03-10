@@ -14,4 +14,8 @@ class MemoController extends Controller
   public function index() {
     return view('memo.index', ['hospitals' => Hospital::all()]);
   }
+
+  public function store(Request $request) {
+    return $request->all();
+  }
 }

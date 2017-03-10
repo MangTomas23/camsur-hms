@@ -48,12 +48,31 @@
             </select>
           </div>
         </div>
+        <label class="label">Attachments</label>
+        <button type="button" class="button" name="button"></button>
       </form>
     </section>
     <footer class="modal-card-foot">
       <button type="button" class="button" name="button">Cancel</button>
-      <button type="button" class="button is-success" name="button">Save</button>
+      <button id="btnSave" type="button" class="button is-success" name="button">Save</button>
     </footer>
   </div>
 </div>
 @endsection
+@push('scripts')
+<script>
+  $('#btnSave').on('click', function() {
+
+    $.ajax({
+      url: '/memo',
+      method: 'post',
+      data: {
+        _token: Laravel.csrfToken
+      }
+    }).done( function(data) {
+      console.log(data);
+    });
+
+  });
+</script>
+@endpush
