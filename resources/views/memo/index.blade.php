@@ -31,7 +31,7 @@
       <form class="" action="index.html" method="post">
         <label class="label">Description</label>
         <div class="control">
-          <input type="text" name="" value="" class="input">
+          <textarea name="name" class="textarea" rows="8" cols="80"></textarea>
         </div>
         <label class="label">Hospital</label>
         <div class="control">
