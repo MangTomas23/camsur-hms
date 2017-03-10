@@ -38,6 +38,9 @@
           <div class="select is-fullwidth">
             <select name="">
               <option value="all">All</option>
+              @foreach($hospitals as $hospital)
+                <option value="{{ $hospital->id }}">{{ $hospital->hospitalid }}</option>
+              @endforeach
             </select>
           </div>
         </div>
