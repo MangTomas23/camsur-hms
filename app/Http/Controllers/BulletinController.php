@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Hospital;
 
-class MemoController extends Controller
+class BulletinController extends Controller
 {
   public function __construct() {
     $this->middleware('auth');
   }
 
   public function index() {
-    return view('memo.index', ['hospitals' => Hospital::all()]);
+    return view('bulletin.index', ['hospitals' => Hospital::all()]);
   }
 
   public function store(Request $request) {

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Memo extends Model
+class Bulletin extends Model
 {
     //
 }

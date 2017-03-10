@@ -39,4 +39,4 @@ Route::group(['prefix' => 'database'], function() {
   Route::get('/', 'DatabaseController@index');
 });
 Route::resource('supplier', 'SupplierController');
-Route::resource('memo', 'MemoController');
+Route::resource('bulletin', 'BulletinController');

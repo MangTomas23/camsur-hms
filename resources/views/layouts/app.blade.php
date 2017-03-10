@@ -42,7 +42,7 @@
               <li><a href="/hospital">Hospitals</a></li>
               <li><a href="/patient">Patients</a></li>
               <li><a href="/supplier">Suppliers</a></li>
-              <li><a href="/memo">Memos</a></li>
+              <li><a href="/bulletin">Bulletins</a></li>
             </ul>
             <p class="menu-label">
               Administration

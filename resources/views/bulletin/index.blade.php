@@ -4,14 +4,15 @@
 
 @section('content')
 
-<h1 class="title is-1">Memos</h1>
+<h1 class="title is-1">Bulletin</h1>
 
 <button type="button" class="button is-info modal-button" data-target="#createModal" name="button">Create</button>
 
 <table class="table is-striped">
   <thead>
     <tr>
-      <th>Memo Id</th>
+      <th>Id</th>
+      <th>Subject</th>
       <th>Description</th>
       <th>Date</th>
     </tr>

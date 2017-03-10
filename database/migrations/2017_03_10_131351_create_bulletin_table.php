@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMemosTable extends Migration
+class CreateBulletinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateMemosTable extends Migration
      */
     public function up()
     {
-        Schema::create('memos', function (Blueprint $table) {
+        Schema::create('bulletins', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('subject');
             $table->text('description');
+            $table->integer('hospital_id')->unsigned()->nullable();
+            $table->foreign('hospital_id')->references('id')->on('hospitals')
+                  ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateMemosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('memos');
+        Schema::dropIfExists('bulletins');
     }
 }
