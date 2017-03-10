@@ -29,6 +29,10 @@
     </header>
     <section class="modal-card-body">
       <form class="" action="index.html" method="post">
+        <label class="label">Subject</label>
+        <div class="control">
+          <input type="text" class="input" name="" value="">
+        </div>
         <label class="label">Description</label>
         <div class="control">
           <textarea name="name" class="textarea" rows="8" cols="80"></textarea>
