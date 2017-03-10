@@ -46,7 +46,10 @@
         </div>
       </form>
     </section>
-    <footer class="modal-card-footer"></footer>
+    <footer class="modal-card-foot">
+      <button type="button" class="button" name="button">Cancel</button>
+      <button type="button" class="button is-success" name="button">Save</button>
+    </footer>
   </div>
 </div>
 @endsection
