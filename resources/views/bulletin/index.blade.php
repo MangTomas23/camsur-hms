@@ -154,7 +154,15 @@
       template: 'qq-template',
       autoUpload: false,
       request: {
-        endpoint: '/bulletin/upload'
+        endpoint: '/bulletin/upload',
+        params: {
+          _token: Laravel.csrfToken
+        }
+      },
+      callbacks: {
+        onComplete: function(id, name, responseJSON, xhr) {
+          console.log(responseJSON);
+        }
       }
     });
 
