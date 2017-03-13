@@ -18,7 +18,7 @@ $(document).ready( function() {
     $(this).parent().removeClass('is-active');
   });
 
-  $('.modal-card-head .delete, .modal-card-foot .button').click(function() {
+  $('.modal-card-head .delete, .modal-card-foot .button.cancel').click(function() {
     $('html').removeClass('is-clipped');
     $('.modal').removeClass('is-active');
   });
