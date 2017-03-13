@@ -15,8 +15,11 @@ class CreateBulletinAttachmentsTable extends Migration
     {
         Schema::create('bulletin_attachments', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('bulletin_id')->unsigned();
+            $table->foreign('bulletin_id')->references('id')->on('bulletins')
+                  ->onDelete('cascade');
             $table->string('public_id');
+            $table->timestamps();
         });
     }
 
