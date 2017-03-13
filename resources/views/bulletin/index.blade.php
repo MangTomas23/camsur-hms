@@ -71,12 +71,6 @@
             <div class="qq-upload-button-selector button">
                 <div>Select files</div>
             </div>
-            <button type="button" id="uploadAttachments" class="button is-primary">
-              <span class="icon is-small">
-                <i class="fa fa-upload"></i>
-              </span>
-              <span>Upload</span>
-            </button>
         </div>
         <span class="qq-drop-processing-selector qq-drop-processing">
             <span>Processing dropped files...</span>
@@ -171,7 +165,6 @@
     });
 
     $('#btnSave').on('click', function() {
-
       $.ajax({
         url: '/memo',
         method: 'post',
@@ -180,8 +173,8 @@
         }
       }).done( function(data) {
         console.log(data);
+        // $('#uploader').fineUploader('uploadStoredFiles');
       });
-
     });
   });
 </script>
