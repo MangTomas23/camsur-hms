@@ -65,4 +65,7 @@ aside.menu {
 .nav-menu .logout {
   margin-right: 8px; }
 
+#uploader .qq-upload-button-selector:hover {
+  color: white; }
+
 /*# sourceMappingURL=styles.css.map */

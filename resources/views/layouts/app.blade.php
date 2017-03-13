@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/bower_components/bulma/css/bulma.css">
     <link rel="stylesheet" href="/css/styles.css">
+    @stack('styles')
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
