@@ -22,4 +22,11 @@ $(document).ready( function() {
     $('html').removeClass('is-clipped');
     $('.modal').removeClass('is-active');
   });
+
+  $(document).keyup( function(e) {
+    if(e.keyCode == 27) {
+      $('html').removeClass('is-clipped');
+      $('.modal').removeClass('is-active');
+    }
+  });
 });
