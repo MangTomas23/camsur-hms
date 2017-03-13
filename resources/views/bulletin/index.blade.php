@@ -166,7 +166,7 @@
 
     $('#btnSave').on('click', function() {
       $.ajax({
-        url: '/memo',
+        url: '/bulletin',
         method: 'post',
         data: {
           _token: Laravel.csrfToken
