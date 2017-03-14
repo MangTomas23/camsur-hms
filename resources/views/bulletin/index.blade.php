@@ -175,7 +175,7 @@
     <td>
       @{{#if attachments}}
         @{{#each attachments}}
-          <a href="link to attachment">@{{filename}}</a>
+          <a href="@{{url}}">@{{filename}}</a>
         @{{/each}}
       @{{else}}
         <span>No attachments.</span>
