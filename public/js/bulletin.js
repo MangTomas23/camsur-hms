@@ -1,7 +1,7 @@
 $(document).ready( function() {
   $('#uploader').fineUploader({
     template: 'qq-template',
-    autoUpload: true,
+    autoUpload: false,
     request: {
       endpoint: '/bulletin/attachment/upload',
       params: {
@@ -28,11 +28,13 @@ $(document).ready( function() {
   $('#bulletinForm').on('submit', function(e) {
     e.preventDefault();
     $.ajax({
-      url: '/bulletin/attachment/upload',
+      url: '/bulletin',
       method: 'post',
       data: $(this).serialize()
     }).done( function(data) {
-      console.log(data);
+      //returns bulletin_id
+      // $('#uploader').fineUploader('uploadStoredFiles');
+
       // $('#uploader').fineUploader('uploadStoredFiles');
     });
   });;
