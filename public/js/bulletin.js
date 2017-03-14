@@ -31,6 +31,20 @@ $(document).ready( function() {
     });
   });;
 
-  $('#btnSave').on('click', function() {
-  });
+  function loadBulletins() {
+    $.ajax({
+      url: '/api/bulletin'
+    }).done( function(data) {
+      console.log(data  );
+      var template = Handlebars.compile($('#bulletin-row-template').html());
+      var table = $('table.bulletins tbody');
+      table.empty();
+      $.each(data, function(i, bulletin) {
+        var html = template(bulletin);
+        table.append(html);
+      });
+    });
+  }
+
+  loadBulletins();
 });

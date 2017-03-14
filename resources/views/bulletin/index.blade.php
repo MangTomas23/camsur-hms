@@ -8,7 +8,7 @@
 
 <button type="button" class="button is-info modal-button" data-target="#createModal" name="button">Create</button>
 
-<table class="table is-striped">
+<table class="table is-striped bulletins">
   <thead>
     <tr>
       <th>Id</th>
