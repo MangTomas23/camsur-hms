@@ -13,4 +13,8 @@ class Bulletin extends Model
   public function hospital() {
     return $this->belongsTo('App\Hospital');
   }
+
+  public function attachments() {
+    return $this->hasMany('App\BulletinAttachment');
+  }
 }

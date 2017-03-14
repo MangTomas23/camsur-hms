@@ -28,6 +28,6 @@ class ApiController extends Controller
   }
 
   public function getBulletins() {
-    return Bulletin::with('category', 'hospital')->get();
+    return Bulletin::with('category', 'hospital', 'attachments')->get();
   }
 }
