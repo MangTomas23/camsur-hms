@@ -22,6 +22,7 @@ $(document).ready( function() {
       onAllComplete: function(succeeded, failed) {
         $('html').removeClass('is-clipped');
         $('.modal').removeClass('is-active');
+        uploader.reset();
       }
     }
   });
