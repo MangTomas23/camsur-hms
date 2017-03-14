@@ -33,9 +33,10 @@ $(document).ready( function() {
       data: $(this).serialize()
     }).done( function(data) {
       //returns bulletin_id
-      // $('#uploader').fineUploader('uploadStoredFiles');
-
-      // $('#uploader').fineUploader('uploadStoredFiles');
+      var uploader = $('#uploader');
+      if(uploader.fineUploader('getUploads').length) {
+        uploader.fineUploader('uploadStoredFiles');
+      }
       loadBulletins();
     });
   });;
