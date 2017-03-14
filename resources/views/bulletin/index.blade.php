@@ -15,6 +15,7 @@
       <th>Subject</th>
       <th>Description</th>
       <th>Date</th>
+      <th>Category</th>
       <th>Attachments</th>
     </tr>
   </thead>
@@ -170,6 +171,7 @@
     <td>@{{ subject }}</td>
     <td>@{{ description}}</td>
     <td>@{{ created_at }}</td>
+    <td>@{{ category.name }}</td>
     <td>//</td>
   </tr>
 </script>
