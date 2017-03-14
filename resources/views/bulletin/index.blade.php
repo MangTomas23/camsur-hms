@@ -174,7 +174,9 @@
     <td>@{{ category.name }}</td>
     <td>
       @{{#if attachments}}
-        <a href="link to attachment">attachment.pdf</a>
+        @{{#each attachments}}
+          <a href="link to attachment">@{{filename}}</a>
+        @{{/each}}
       @{{else}}
         <span>No attachments.</span>
       @{{/if}}
