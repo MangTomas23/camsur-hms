@@ -15,6 +15,7 @@ class BulletinAttachmentController extends Controller
       $bulletinAttachment = new BulletinAttachment;
       $bulletinAttachment->public_id = $result->public_id;
       $bulletinAttachment->bulletin_id = $request->bulletin_id;
+      $bulletinAttachment->filename = $request->qqfilename;
       $bulletinAttachment->save();
       return ['success' => 'File uploaded successfully.'];
     }catch(\Exception $e) {

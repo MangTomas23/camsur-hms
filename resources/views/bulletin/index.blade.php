@@ -172,7 +172,13 @@
     <td>@{{ description}}</td>
     <td>@{{ created_at }}</td>
     <td>@{{ category.name }}</td>
-    <td>//</td>
+    <td>
+      @{{#if attachments}}
+        <a href="link to attachment">attachment.pdf</a>
+      @{{else}}
+        <span>No attachments.</span>
+      @{{/if}}
+    </td>
   </tr>
 </script>
 
