@@ -22,7 +22,7 @@
   </tbody>
 </table>
 
-<div id="createModal" class="modal is-active">
+<div id="createModal" class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
