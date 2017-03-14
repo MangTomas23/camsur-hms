@@ -29,19 +29,20 @@
       <p class="modal-card-title">Title</p>
     </header>
     <section class="modal-card-body">
-      <form class="" action="index.html" method="post">
+      <form class="" action="/bulletin" method="post" id="bulletinForm">
+        {{ csrf_field() }}
         <label class="label">Subject</label>
         <div class="control">
-          <input type="text" class="input" name="" value="">
+          <input type="text" class="input" name="subject" value="">
         </div>
         <label class="label">Description</label>
         <div class="control">
-          <textarea name="name" class="textarea" rows="8" cols="80"></textarea>
+          <textarea name="description" class="textarea" rows="8" cols="80"></textarea>
         </div>
         <label class="label">Hospital</label>
         <div class="control">
           <div class="select is-fullwidth">
-            <select name="">
+            <select name="hospital">
               <option value="all">All</option>
               @foreach($hospitals as $hospital)
                 <option value="{{ $hospital->id }}">{{ $hospital->hospitalid }}</option>
@@ -51,11 +52,11 @@
         </div>
         <label class="label">Attachments</label>
         <div id="uploader"></div>
-      </form>
     </section>
     <footer class="modal-card-foot">
       <button type="button" class="button cancel" name="button">Cancel</button>
-      <button id="btnSave" type="button" class="button is-success" name="button">Save</button>
+      <button id="btnSave" type="submit" class="button is-success" name="button">Save</button>
+    </form>
     </footer>
   </div>
 </div>
@@ -164,17 +165,21 @@
       $('#uploader').fineUploader('uploadStoredFiles');
     });
 
-    $('#btnSave').on('click', function() {
+    $('#bulletinForm').on('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(document.getElementById('bulletinForm'));
+      console.log(formData.getAll());
       $.ajax({
         url: '/bulletin',
         method: 'post',
-        data: {
-          _token: Laravel.csrfToken
-        }
+        data: formData.getAll()
       }).done( function(data) {
         console.log(data);
         // $('#uploader').fineUploader('uploadStoredFiles');
       });
+    });;
+
+    $('#btnSave').on('click', function() {
     });
   });
 </script>

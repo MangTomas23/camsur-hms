@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hospital;
+use App\Bulletin;
 use Cloudder;
 
 class BulletinController extends Controller
@@ -17,7 +18,13 @@ class BulletinController extends Controller
   }
 
   public function store(Request $request) {
-    return $request->all();
+    $hospital_id = $request->hospital=='all' ? null:$request->hospital;
+    $bulletin = new Bulletin;
+    $bulletin->subject = $request->subject;
+    $bulletin->description = $request->description;
+    $bulletin->hospital_id = $hospital_id;
+    $bulletin->save();
+    return ['bulletin_id' => $bulletin->id];
   }
 
   public function upload(Request $request) {
