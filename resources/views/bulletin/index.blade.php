@@ -54,8 +54,10 @@
         <div id="uploader"></div>
     </section>
     <footer class="modal-card-foot">
-      <button type="button" class="button cancel" name="button">Cancel</button>
-      <button id="btnSave" type="submit" class="button is-success" name="button">Save</button>
+      <div class="column has-text-right is-paddingless">
+        <button type="button" class="button cancel" name="button">Cancel</button>
+        <button id="btnSave" type="submit" class="button is-success" name="button">Save</button>
+      </div>
     </form>
     </footer>
   </div>
