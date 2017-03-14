@@ -27,6 +27,7 @@ class BulletinController extends Controller
     $bulletin->subject = $request->subject;
     $bulletin->description = $request->description;
     $bulletin->hospital_id = $hospital_id;
+    $bulletin->bulletin_category_id = $request->bulletin_category;
     $bulletin->save();
     return ['bulletin_id' => $bulletin->id];
   }
