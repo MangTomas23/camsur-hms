@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('sync', 'SyncController@sync');
 Route::get('search/patient', 'ApiController@searchPatient');
 Route::post('bulletin/upload', 'BulletinController@upload');
+Route::get('bulletin', 'ApiController@getBulletins');

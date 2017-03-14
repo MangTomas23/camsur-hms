@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Patient;
+use App\Bulletin;
 use Validator;
 
 class ApiController extends Controller
@@ -24,5 +25,9 @@ class ApiController extends Controller
     }
 
     return $patient;
+  }
+
+  public function getBulletins() {
+    return Bulletin::with('category', 'hospital')->get();
   }
 }
