@@ -57,9 +57,11 @@
             <label class="label">Category</label>
             <div class="control">
               <div class="select is-fullwidth">
-                <select class="select" name="">
+                <select class="select" name="bulletin_category">
                   @foreach($bulletin_categories as $bulletin_category)
-                    <option>{{ $bulletin_category->name }}</option>
+                    <option value="{{ $bulletin_category->id }}">
+                      {{ $bulletin_category->name }}
+                    </option>
                   @endforeach
                 </select>
               </div>
