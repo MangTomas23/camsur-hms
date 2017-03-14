@@ -164,6 +164,15 @@
         </dialog>
     </div>
 </script>
+<script id="bulletin-row-template" type="text/x-handlebars-template">
+  <tr>
+    <td>@{{ id }}</td>
+    <td>@{{ subject }}</td>
+    <td>@{{ description}}</td>
+    <td>@{{ created_at }}</td>
+    <td>//</td>
+  </tr>
+</script>
 
 @endsection
 @push('scripts')
