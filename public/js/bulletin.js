@@ -1,11 +1,17 @@
 $(document).ready( function() {
   $('#uploader').fineUploader({
     template: 'qq-template',
-    autoUpload: false,
+    autoUpload: true,
     request: {
-      endpoint: '/bulletin/upload',
+      endpoint: '/bulletin/attachment/upload',
       params: {
         _token: Laravel.csrfToken
+      }
+    },
+    thumbnails: {
+      placeholders: {
+        notAvailablePath: '/fine_uploader/placeholders/not_available-generic.png',
+        waitingPath: '/fine_uploader/placeholders/waiting-generic.png'
       }
     },
     callbacks: {

@@ -39,5 +39,5 @@ Route::group(['prefix' => 'database'], function() {
   Route::get('/', 'DatabaseController@index');
 });
 Route::resource('supplier', 'SupplierController');
-Route::resource('bulletin', 'BulletinController');
 Route::post('bulletin/attachment/upload', 'BulletinAttachmentController@upload');
+Route::resource('bulletin', 'BulletinController');
