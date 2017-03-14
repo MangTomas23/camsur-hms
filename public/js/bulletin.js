@@ -1,5 +1,6 @@
 $(document).ready( function() {
-  $('#uploader').fineUploader({
+   var uploader = new qq.FineUploader({
+    element: document.querySelector('#uploader'),
     template: 'qq-template',
     autoUpload: false,
     request: {
@@ -21,10 +22,6 @@ $(document).ready( function() {
     }
   });
 
-  $('#uploadAttachments').on('click', function() {
-    $('#uploader').fineUploader('uploadStoredFiles');
-  });
-
   $('#bulletinForm').on('submit', function(e) {
     e.preventDefault();
     $.ajax({
@@ -32,10 +29,9 @@ $(document).ready( function() {
       method: 'post',
       data: $(this).serialize()
     }).done( function(data) {
-      //returns bulletin_id
-      var uploader = $('#uploader');
-      if(uploader.fineUploader('getUploads').length) {
-        uploader.fineUploader('uploadStoredFiles');
+      if(uploader.getUploads().length) {
+        uploader.setParams({bulletin_id: data.bulletin_id, _token: Laravel.csrfToken});
+        uploader.uploadStoredFiles();
       }
       loadBulletins();
     });

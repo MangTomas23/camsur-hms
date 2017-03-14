@@ -179,7 +179,7 @@
 @endsection
 @push('scripts')
 <script src="/fine_uploader/fine-uploader.core.js"></script>
-<script src="/fine_uploader/jquery.fine-uploader.js"></script>
+<script src="/fine_uploader/fine-uploader.js"></script>
 <script src="/bower_components/handlebars/handlebars.min.js"></script>
 <script src="/js/bulletin.js"></script>
 @endpush
