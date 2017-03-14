@@ -12,9 +12,6 @@ class BulletinAttachmentController extends Controller
     try {
       Cloudder::upload($request->qqfile);
       $result = (object) Cloudder::getResult();
-      // $result->public_id;
-      // $result->public_id;
-      // $result->format;
       $bulletinAttachment = new BulletinAttachment;
       $bulletinAttachment->public_id = $result->public_id;
       $bulletinAttachment->bulletin_id = $request->bulletin_id;
