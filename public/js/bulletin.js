@@ -18,6 +18,10 @@ $(document).ready( function() {
     callbacks: {
       onComplete: function(id, name, responseJSON, xhr) {
         console.log(responseJSON);
+      },
+      onAllComplete: function(succeeded, failed) {
+        $('html').removeClass('is-clipped');
+        $('.modal').removeClass('is-active');
       }
     }
   });
@@ -41,7 +45,6 @@ $(document).ready( function() {
     $.ajax({
       url: '/api/bulletin'
     }).done( function(data) {
-      console.log(data  );
       var template = Handlebars.compile($('#bulletin-row-template').html());
       var table = $('table.bulletins tbody');
       table.empty();
