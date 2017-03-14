@@ -56,7 +56,12 @@
     <footer class="modal-card-foot">
       <div class="column has-text-right is-paddingless">
         <button type="button" class="button cancel" name="button">Cancel</button>
-        <button id="btnSave" type="submit" class="button is-success" name="button">Save</button>
+        <button id="btnSave" type="submit" class="button is-success" name="button">
+          <span class="icon is-small">
+            <i class="fa fa-save"></i>
+          </span>
+          <span>Save</span>
+        </button>
       </div>
     </form>
     </footer>
