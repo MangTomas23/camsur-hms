@@ -26,7 +26,7 @@
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Title</p>
+      <p class="modal-card-title">Create</p>
     </header>
     <section class="modal-card-body">
       <form class="" action="/bulletin" method="post" id="bulletinForm">
