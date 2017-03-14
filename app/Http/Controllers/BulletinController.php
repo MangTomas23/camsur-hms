@@ -31,17 +31,4 @@ class BulletinController extends Controller
     $bulletin->save();
     return ['bulletin_id' => $bulletin->id];
   }
-
-  public function upload(Request $request) {
-    try {
-      Cloudder::upload($request->qqfile);
-      $result =  Cloudder::getResult();
-      // $result->public_id;
-      // $result->public_id;
-      // $result->format;
-      return ['success' => 'File uploaded successfully.'];
-    }catch(\Exception $e) {
-      return ['error' => 'Invalid'];
-    }
-  }
 }

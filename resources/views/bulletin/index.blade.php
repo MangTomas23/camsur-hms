@@ -193,7 +193,7 @@
     $('#bulletinForm').on('submit', function(e) {
       e.preventDefault();
       $.ajax({
-        url: '/bulletin',
+        url: '/bulletin/attachment/upload',
         method: 'post',
         data: $(this).serialize()
       }).done( function(data) {
