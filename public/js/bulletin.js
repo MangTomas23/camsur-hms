@@ -36,6 +36,7 @@ $(document).ready( function() {
       // $('#uploader').fineUploader('uploadStoredFiles');
 
       // $('#uploader').fineUploader('uploadStoredFiles');
+      loadBulletins();
     });
   });;
 
