@@ -15,6 +15,7 @@
       <th>Subject</th>
       <th>Description</th>
       <th>Date</th>
+      <th>Attachments</th>
     </tr>
   </thead>
   <tbody>
