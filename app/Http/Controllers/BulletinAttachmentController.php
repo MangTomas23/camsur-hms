@@ -9,7 +9,6 @@ use App\BulletinAttachment;
 class BulletinAttachmentController extends Controller
 {
   public function upload(Request $request) {
-    return ['success' => true, 'objectid' => $request->bulletin_id];
     try {
       Cloudder::upload($request->qqfile);
       $result = (object) Cloudder::getResult();
