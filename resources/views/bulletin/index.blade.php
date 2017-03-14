@@ -39,15 +39,29 @@
         <div class="control">
           <textarea name="description" class="textarea" rows="8" cols="80"></textarea>
         </div>
-        <label class="label">Hospital</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select name="hospital">
-              <option value="all">All</option>
-              @foreach($hospitals as $hospital)
-                <option value="{{ $hospital->id }}">{{ $hospital->hospitalid }}</option>
-              @endforeach
-            </select>
+        <div class="columns">
+          <div class="column">
+            <label class="label">Hospital</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select name="hospital">
+                  <option value="all">All</option>
+                  @foreach($hospitals as $hospital)
+                    <option value="{{ $hospital->id }}">{{ $hospital->hospitalid }}</option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <label class="label">Category</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select class="select" name="">
+                  
+                </select>
+              </div>
+            </div>
           </div>
         </div>
         <label class="label">Attachments</label>
