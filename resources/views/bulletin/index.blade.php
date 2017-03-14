@@ -190,12 +190,10 @@
 
     $('#bulletinForm').on('submit', function(e) {
       e.preventDefault();
-      var formData = new FormData(document.getElementById('bulletinForm'));
-      console.log(formData.getAll());
       $.ajax({
         url: '/bulletin',
         method: 'post',
-        data: formData.getAll()
+        data: $(this).serialize()
       }).done( function(data) {
         console.log(data);
         // $('#uploader').fineUploader('uploadStoredFiles');
