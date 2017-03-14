@@ -58,7 +58,9 @@
             <div class="control">
               <div class="select is-fullwidth">
                 <select class="select" name="">
-                  
+                  @foreach($bulletin_categories as $bulletin_category)
+                    <option>{{ $bulletin_category->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Hospital;
 use App\Bulletin;
+use App\BulletinCategory;
 use Cloudder;
 
 class BulletinController extends Controller
@@ -14,7 +15,10 @@ class BulletinController extends Controller
   // }
 
   public function index() {
-    return view('bulletin.index', ['hospitals' => Hospital::all()]);
+    return view('bulletin.index', [
+      'hospitals' => Hospital::all(),
+      'bulletin_categories' => BulletinCategory::all()
+    ]);
   }
 
   public function store(Request $request) {
