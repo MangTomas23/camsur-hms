@@ -21,7 +21,7 @@ class DatabaseController extends Controller
     $db = env('DB_DATABASE');
 
     $backupfile = './dumps/hms' . date("Y-m-d-H-i-s") . '.gz';
-    $command = "mysqldump --opt -h $host --user=$user --password=$password $db | gzip > $backupfile";
+    $command = "mysqldump --opt --host=$host --user=$user --password=$password $db | gzip > $backupfile";
     exec($command);
     return response()->download($backupfile);
   }
