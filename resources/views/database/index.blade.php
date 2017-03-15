@@ -19,6 +19,9 @@
     </div>
   </div>
 </div>
+<form id="backupForm" action="/database/backup" method="post">
+  {{ csrf_field() }}
+</form>
 @endsection
 
 @push('scripts')
@@ -26,9 +29,13 @@
   $(document).ready( function() {
     $('#backup').on('click', function() {
       $.ajax({
-        url: '/database/backup'
+        url: '/database/backup',
+        method: 'post',
+        data: {
+          _token: Laravel.csrfToken
+        }
       }).done( function(data){
-        window.location = '/database/backup';
+        $('#backupForm').submit();
       });
     });
   });

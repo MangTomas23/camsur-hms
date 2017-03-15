@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 
 class DatabaseController extends Controller
 {
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
   public function index() {
     return view('database.index');
   }
 
-  public function backup() {
+  public function backup(Request $request) {
     $host = env('DB_HOST');
     $user = env('DB_USERNAME');
     $password = env('DB_PASSWORD');
