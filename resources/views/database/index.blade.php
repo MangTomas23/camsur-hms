@@ -9,7 +9,7 @@
 <div class="box">
   <div class="columns">
     <div class="column has-text-centered">
-      <button type="button" class="button is-success" name="button">Backup Database</button>
+      <button id="backup" type="button" class="button is-success" name="button">Backup Database</button>
     </div>
     <div class="column has-text-centered">
       <button type="button" class="button is-warning" name="button">Restore Database</button>
@@ -24,8 +24,12 @@
 @push('scripts')
 <script>
   $(document).ready( function() {
-    $('button').on('click', function() {
-      alert('Not yet implemented!');
+    $('#backup').on('click', function() {
+      $.ajax({
+        url: '/database/backup'
+      }).done( function(data){
+        window.location = '/database/backup';
+      });
     });
   });
 </script>

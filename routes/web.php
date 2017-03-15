@@ -37,6 +37,7 @@ Route::group(['prefix' => 'change/password'], function() {
 Route::get('home', 'HomeController@index');
 Route::group(['prefix' => 'database'], function() {
   Route::get('/', 'DatabaseController@index');
+  Route::get('backup', 'DatabaseController@backup');
 });
 Route::resource('supplier', 'SupplierController');
 Route::post('bulletin/attachment/upload', 'BulletinAttachmentController@upload');
