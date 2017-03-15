@@ -23,6 +23,7 @@ $(document).ready( function() {
         $('html').removeClass('is-clipped');
         $('.modal').removeClass('is-active');
         uploader.reset();
+        loadBulletins();
       }
     }
   });
@@ -37,8 +38,9 @@ $(document).ready( function() {
       if(uploader.getUploads().length) {
         uploader.setParams({bulletin_id: data.bulletin_id, _token: Laravel.csrfToken});
         uploader.uploadStoredFiles();
+      }else {
+        loadBulletins();
       }
-      loadBulletins();
     });
   });;
 
