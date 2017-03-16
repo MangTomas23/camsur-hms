@@ -7,6 +7,7 @@ use App\Hospital;
 use App\Patient;
 use App\Doctor;
 use App\Nurse;
+use App\Payment;
 
 class HospitalController extends Controller
 {
@@ -31,7 +32,9 @@ class HospitalController extends Controller
   }
 
   public function payments() {
-    return view('hospital.payment');
+    return view('hospital.payment', [
+      'payments' => Payment::all()
+    ]);
   }
 
   public function doctors() {

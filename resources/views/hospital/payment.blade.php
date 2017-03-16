@@ -17,13 +17,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    @foreach($payments as $payment)
+      <tr>
+        <td>{{ $payment->id }}</td>
+        <td>{{ $payment->patient }}</td>
+        <td>{{ $payment->date }}</td>
+        <td>{{ $payment->total }}</td>
+        <td>{{ $payment->status }}</td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
 
