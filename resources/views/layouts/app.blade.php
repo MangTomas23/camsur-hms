@@ -49,6 +49,16 @@
             </p>
             <ul class="menu-list">
               <li>
+                <a href="/users">
+                  <span class="icon is-small">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <span>
+                    Users
+                  </span>
+                </a>
+              </li>
+              <li>
                 <a href="/change/password">
                   <span class="icon is-small">
                     <i class="fa fa-key"></i>
