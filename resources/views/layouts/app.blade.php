@@ -83,7 +83,12 @@
               <div class="nav-left">
                 <a href="/" class="nav-item">
                   <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
-                  HMS
+                  <span>
+                    <strong>
+                      HMS
+                    </strong>
+                  </span>
+                  <small style="margin-left: 5px; font-size: 10px;">alpha</small>
                 </a>
               </div>
               <span class="nav-toggle">
