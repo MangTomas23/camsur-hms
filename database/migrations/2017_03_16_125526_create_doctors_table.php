@@ -24,7 +24,7 @@ class CreateDoctorsTable extends Migration
             $table->string('department');
             $table->string('hospitalid');
             $table->integer('hospital_id')->unsigned();
-            $table->foreign('hospital_id')->references('id')->on('hospitals1');
+            $table->foreign('hospital_id')->references('id')->on('hospitals');
             $table->timestamps();
         });
     }
