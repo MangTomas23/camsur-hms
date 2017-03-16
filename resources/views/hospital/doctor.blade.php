@@ -26,7 +26,7 @@
         <td>{{ $doctor->firstname }}</td>
         <td>{{ $doctor->middlename }}</td>
         <td>{{ $doctor->lastname }}</td>
-        <td>{{ $doctor->rate }}</td>
+        <td>{{ number_format($doctor->rate,2,'.',',') }}</td>
         <td>{{ $doctor->status }}</td>
         <td>{{ $doctor->designation }}</td>
         <td>{{ $doctor->department }}</td>
