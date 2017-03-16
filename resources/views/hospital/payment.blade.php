@@ -20,7 +20,7 @@
     @foreach($payments as $payment)
       <tr>
         <td>{{ $payment->id }}</td>
-        <td>{{ $payment->patient }}</td>
+        <td>{{ $payment->patient->fullname() }}</td>
         <td>{{ $payment->date }}</td>
         <td>{{ $payment->total }}</td>
         <td>{{ $payment->status }}</td>
