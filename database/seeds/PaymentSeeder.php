@@ -15,6 +15,7 @@ class PaymentSeeder extends Seeder
         'patient_id' => 1,
         'date' => '02-03-2017',
         'total' => 50000,
+        'hospital_id' => 1,
         'status' => ''
       ]);
     }
