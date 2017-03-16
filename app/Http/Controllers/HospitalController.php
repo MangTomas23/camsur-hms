@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Hospital;
 use App\Patient;
+use App\Doctor;
 
 class HospitalController extends Controller
 {
@@ -33,7 +34,9 @@ class HospitalController extends Controller
   }
 
   public function doctors() {
-    return view('hospital.doctor');
+    return view('hospital.doctor', [
+      'doctors' => Doctor::all()
+    ]);
   }
 
   public function nurses() {

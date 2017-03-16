@@ -20,15 +20,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    @foreach($doctors as $doctor)
+      <tr>
+        <td>{{ $doctor->id }}</td>
+        <td>{{ $doctor->firstname }}</td>
+        <td>{{ $doctor->middlename }}</td>
+        <td>{{ $doctor->lastname }}</td>
+        <td>{{ $doctor->rate }}</td>
+        <td>{{ $doctor->status }}</td>
+        <td>{{ $doctor->designation }}</td>
+        <td>{{ $doctor->department }}</td>
+      </tr>
+    @endforeach
   </tbody>
 
 </table>
