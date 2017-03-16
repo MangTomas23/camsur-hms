@@ -12,4 +12,8 @@ class UserController extends Controller
       'users' => User::all()
     ]);
   }
+
+  public function create() {
+    return view('user.create');
+  }
 }

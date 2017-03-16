@@ -5,6 +5,7 @@
 @section('content')
 
 <h1 class="title is-1">Users</h1>
+<a href="{{ route('user.create') }}" class="button is-primary">Add</a>
 
 <section class="section">
   <table class="table">
