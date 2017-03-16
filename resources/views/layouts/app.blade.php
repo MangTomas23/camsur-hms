@@ -42,7 +42,6 @@
             <ul class="menu-list">
               <li><a href="/hospital">Hospitals</a></li>
               <li><a href="/patient">Patients</a></li>
-              <li><a href="/supplier">Suppliers</a></li>
               <li><a href="/bulletin">Bulletin</a></li>
             </ul>
             <p class="menu-label">
@@ -75,8 +74,6 @@
             </p>
             <ul class="menu-list">
               <li><a>Payments</a></li>
-              <li><a>Transfers</a></li>
-              <li><a>Balance</a></li>
             </ul>
           </aside>
         </div>
