@@ -49,7 +49,7 @@
             </p>
             <ul class="menu-list">
               <li>
-                <a href="/users">
+                <a href="/user">
                   <span class="icon is-small">
                     <i class="fa fa-user"></i>
                   </span>
