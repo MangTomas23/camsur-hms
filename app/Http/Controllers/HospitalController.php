@@ -17,7 +17,11 @@ class HospitalController extends Controller
   }
 
   public function show($id) {
-    return view('hospital.show', ['hospital' => $this->getHospital($id)]);
+    $hospital = $this->getHospital($id);
+    return view('hospital.show', [
+      'hospital' => $hospital,
+      'count' => $hospital->patients->count()
+    ]);
   }
 
   public function patients($id) {
