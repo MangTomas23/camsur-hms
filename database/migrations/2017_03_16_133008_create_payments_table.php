@@ -15,8 +15,8 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('patient')->unsigned();
-            $table->foreign('patient')->references('id')->on('patients')->onDelete('cascade');
+            $table->integer('patient_id')->unsigned();
+            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->date('date');
             $table->decimal('total', 10, 2);
             $table->string('status');
