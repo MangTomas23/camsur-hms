@@ -67,7 +67,7 @@
         ],
         datasets: [{
           label: '# of patients per day. (February)',
-          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 8, 9, 6, 12 , 4, 10],
+          data: [12, 19, 9, 10, 2, 8, 12, 19, 6, 8, 9, 6, 12 , 4, 10],
           backgroundColor: [
               'rgba(99, 255, 115, 0.41)',
           ],
