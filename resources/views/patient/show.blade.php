@@ -38,7 +38,7 @@
 
 @php $hospital  = $patient->hospital @endphp
 
-<h2 class="title is-2">From</h2>
+<h2 class="title is-2">Medical History</h2>
 <div class="box">
   <div class="columns">
     <div class="column">
