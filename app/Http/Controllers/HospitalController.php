@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Hospital;
 use App\Patient;
 use App\Doctor;
+use App\Nurse;
 
 class HospitalController extends Controller
 {
@@ -40,7 +41,9 @@ class HospitalController extends Controller
   }
 
   public function nurses() {
-    return view('hospital.nurse');
+    return view('hospital.nurse', [
+      'nurses' => Nurse::all()
+    ]);
   }
 
   private function getHospital($id) {

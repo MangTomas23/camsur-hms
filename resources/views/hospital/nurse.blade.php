@@ -17,13 +17,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    @foreach($nurses as $nurse)
+      <tr>
+        <td>{{ $nurse->id }}</td>
+        <td>{{ $nurse->firstname }}</td>
+        <td>{{ $nurse->middlename }}</td>
+        <td>{{ $nurse->lastname }}</td>
+        <td>{{ $nurse->status }}</td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
 
