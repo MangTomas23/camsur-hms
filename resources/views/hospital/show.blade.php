@@ -15,7 +15,7 @@
     </h1>
     <div class="columns hospital-menu">
       <div class="column">
-        <div class="box has-text-centered">
+        <div id="patient" class="box has-text-centered" data-count="{{ $count }}">
           <img src="/img/patient-male.png" alt="">
           <a href="{{ $link }}/patients">Patients</a>
         </div>
@@ -54,6 +54,7 @@
 @endsection
 
 @push('scripts')
+<script src="/js/tipped.js"></script>
 <script src="/bower_components/chart.js/dist/Chart.min.js"></script>
 <script>
   $(document).ready( function() {
@@ -90,6 +91,11 @@
     $('.hospital-menu .box').on('click', function() {
       window.location.href = $(this).find('a').attr('href');
     });
+
+    Tipped.create('#patient', 'Total No. of Patients: ' + $('#patient').data('count'));
   });
 </script>
+@endpush
+@push('styles')
+  <link rel="stylesheet" href="/css/tipped.css">
 @endpush
