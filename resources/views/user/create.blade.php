@@ -4,6 +4,8 @@
 
 @section('content')
 
-
+<div class="notification is-warning">
+  <code>Not yet implemented!</code>
+</div>
 
 @endsection
