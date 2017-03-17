@@ -26,11 +26,11 @@
           <p class="hospital-code">{{ $hospital->hospitalid }}</p>
         </div>
         <div class="column has-text-right">
-          <span class="tag is-medium is-info">
+          <span class="tag is-medium is-info hospital-status">
             <span class="icon is-small">
               <i class="fa fa-dot-circle-o"></i>
             </span>
-            <span class="hospital-status">
+            <span>
               {{ $hospital->status }}
             </span>
           </span>
