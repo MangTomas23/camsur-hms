@@ -4,7 +4,7 @@
 
 @section('content')
 <section>
-  <h3 class="title is-3">Inventory</h3>
+  <h1 class="title is-1">Inventory</h1>
   <table class="table is-striped">
     <thead>
       <tr>
