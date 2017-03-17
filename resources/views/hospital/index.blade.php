@@ -22,8 +22,8 @@
         <div class="media-content">
           <div class="columns">
         <div class="column">
-          <strong>{{ $hospital->hospitaldescription }}</strong>
-          <p>{{ $hospital->hospitalid }}</p>
+          <strong class="hospital-description">{{ $hospital->hospitaldescription }}</strong>
+          <p class="hospital-code">{{ $hospital->hospitalid }}</p>
         </div>
         <div class="column has-text-right">
           <span class="tag is-medium is-info">
@@ -46,6 +46,7 @@
 <script src="/js/tipped.js"></script>
 <script>
   Tipped.create('.hospital-status', 'STATUS');
+  Tipped.create('.hospital-code', 'HOSPITAL CODE');
 </script>
 @endpush
 @push('styles')

@@ -123,6 +123,14 @@ aside.menu {
       }
     }
 
+    .hospital-description {
+      display: block;
+    }
+
+    .hospital-code {
+      display: inline;
+    }
+
     .column:nth-child(2) {
       display: flex;
       justify-content: flex-end;

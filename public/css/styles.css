@@ -74,6 +74,10 @@ aside.menu {
     color: #00d1b2; }
   .hospital-list .box .media-left i {
     color: #007F6D; }
+  .hospital-list .box .hospital-description {
+    display: block; }
+  .hospital-list .box .hospital-code {
+    display: inline; }
   .hospital-list .box .column:nth-child(2) {
     display: flex;
     justify-content: flex-end;
