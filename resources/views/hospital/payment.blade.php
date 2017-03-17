@@ -22,7 +22,7 @@
         <td>{{ $payment->id }}</td>
         <td>{{ $payment->patient->fullname() }}</td>
         <td>{{ $payment->date }}</td>
-        <td>{{ $payment->total }}</td>
+        <td>{{ number_format($payment->total, 2, '.', ',') }}</td>
         <td>{{ $payment->status }}</td>
       </tr>
     @endforeach
