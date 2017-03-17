@@ -117,6 +117,12 @@ aside.menu {
       color: $blue;
     }
 
+    .media-left {
+      i {
+        color: #007F6D;
+      }
+    }
+
     .column:nth-child(2) {
       display: flex;
       justify-content: flex-end;

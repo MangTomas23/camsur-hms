@@ -72,6 +72,8 @@ aside.menu {
   padding-bottom: 3px; }
   .hospital-list .box:hover {
     color: #00d1b2; }
+  .hospital-list .box .media-left i {
+    color: #007F6D; }
   .hospital-list .box .column:nth-child(2) {
     display: flex;
     justify-content: flex-end;
