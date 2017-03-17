@@ -109,3 +109,18 @@ aside.menu {
     color: white;
   }
 }
+
+.hospital-list {
+  .box {
+    padding-bottom: 3px;
+    &:hover {
+      color: $blue;
+    }
+
+    .column:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

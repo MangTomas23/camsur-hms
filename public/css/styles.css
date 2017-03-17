@@ -68,4 +68,13 @@ aside.menu {
 #uploader .qq-upload-button-selector:hover {
   color: white; }
 
+.hospital-list .box {
+  padding-bottom: 3px; }
+  .hospital-list .box:hover {
+    color: #00d1b2; }
+  .hospital-list .box .column:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+
 /*# sourceMappingURL=styles.css.map */
