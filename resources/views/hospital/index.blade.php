@@ -30,7 +30,7 @@
             <span class="icon is-small">
               <i class="fa fa-dot-circle-o"></i>
             </span>
-            <span>
+            <span class="hospital-status">
               {{ $hospital->status }}
             </span>
           </span>
@@ -42,3 +42,12 @@
   @endforeach
 </section>
 @endsection
+@push('scripts')
+<script src="/js/tipped.js"></script>
+<script>
+  Tipped.create('.hospital-status', 'STATUS');
+</script>
+@endpush
+@push('styles')
+<link rel="stylesheet" href="/css/tipped.css">
+@endpush
