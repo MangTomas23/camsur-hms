@@ -121,6 +121,11 @@ aside.menu {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      .tag {
+        .icon {
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
