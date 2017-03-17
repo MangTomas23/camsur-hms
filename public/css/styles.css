@@ -77,4 +77,8 @@ aside.menu {
     justify-content: flex-end;
     align-items: center; }
 
+.page-title {
+  margin-bottom: 18px;
+  font-size: 1.2em; }
+
 /*# sourceMappingURL=styles.css.map */

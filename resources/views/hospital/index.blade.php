@@ -4,7 +4,9 @@
 
 @section('content')
 
-<h1 class="title is-1">Hospitals</h1>
+<p class="page-title">
+  <strong>Hospitals</strong>
+</p>
 
 <section class="section hospital-list is-paddingless">
   @foreach($hospitals as $hospital)
