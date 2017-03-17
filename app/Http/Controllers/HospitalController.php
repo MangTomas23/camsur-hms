@@ -11,6 +11,10 @@ use App\Payment;
 
 class HospitalController extends Controller
 {
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
   public function index() {
     $hospitals = Hospital::all();
     return view('hospital.index', ['hospitals' => $hospitals]);
